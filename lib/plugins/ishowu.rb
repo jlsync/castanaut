@@ -30,7 +30,7 @@ module Castanaut; module Plugin
 
       sleep(0.2)
       bounds = screen_size
-      automatically "mousewarp #{bounds[:to][:width]} #{bounds[:to][:height]}"
+      automatically "mousewarp #{bounds[:to][:width] - 4} #{bounds[:to][:height] - 4}"
       drag to(
         options[:to][:left] + options[:to][:width],
         options[:to][:top] + options[:to][:height]
