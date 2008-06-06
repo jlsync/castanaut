@@ -26,13 +26,13 @@ module Castanaut
 
 
       def command_keystroke(x)
-        execute_applescript(%Q`
-        tell application "System Events"
-          tell process "Terminal"
-             keystroke x using {command down}
+        execute_applescript("
+        tell application \"System Events\"
+          tell process \"Terminal\"
+             keystroke \"#{x}\" using {command down}
           end tell
          end tell
-        `)
+        ")
       end
 
       # Get the co-ordinates of an element in the front Safari tab. Use this
