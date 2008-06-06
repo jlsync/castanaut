@@ -24,6 +24,17 @@ module Castanaut
         `)
       end
 
+
+      def command_keystroke(x)
+        execute_applescript(%Q`
+        tell application "System Events"
+          tell process "Terminal"
+             keystroke x using {command down}
+          end tell
+         end tell
+        `)
+      end
+
       # Get the co-ordinates of an element in the front Safari tab. Use this
       # with Castanaut::Movie#cursor to send the mouse cursor to the element.
       #
